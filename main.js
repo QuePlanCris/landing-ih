@@ -115,7 +115,7 @@ if (form) {
         message: form.querySelector('#message').value.trim(),
       };
 
-      const res = await fetch('https://qptech.app.n8n.cloud/webhook-test/contact-form', {
+      const res = await fetch('https://qptech.app.n8n.cloud/webhook/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
