@@ -3,7 +3,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // ── Mobile nav ────────────────────────────────────────────────────────────
 const navToggle = document.getElementById('nav-toggle');
-const siteNav   = document.getElementById('site-nav');
+const siteNav = document.getElementById('site-nav');
 
 navToggle.addEventListener('click', () => {
   const open = siteNav.classList.toggle('open');
@@ -109,13 +109,13 @@ if (form) {
 
     try {
       const payload = {
-        name:    form.querySelector('#name').value.trim(),
-        email:   form.querySelector('#email').value.trim(),
-        topic:   form.querySelector('#topic').value,
+        name: form.querySelector('#name').value.trim(),
+        email: form.querySelector('#email').value.trim(),
+        topic: form.querySelector('#topic').value,
         message: form.querySelector('#message').value.trim(),
       };
 
-      const res = await fetch('https://qptech.app.n8n.cloud/webhook/contact-form', {
+      const res = await fetch('https://qptech.app.n8n.cloud/webhook-test/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
